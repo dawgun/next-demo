@@ -1,7 +1,8 @@
 import { i18nMiddleware } from "./middlewares/i18nMiddleware";
+import { cookieLanguageRedirectMiddleware } from "./middlewares/cookieLanguageRedirectMiddleware";
 import { middlewareChainer } from "./middlewares/middlewareChainer";
 
-const middlewareList = [i18nMiddleware];
+const middlewareList = [cookieLanguageRedirectMiddleware, i18nMiddleware];
 
 export default middlewareChainer(middlewareList);
 
